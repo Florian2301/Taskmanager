@@ -1,3 +1,1 @@
-This full-stack project is build with Java and Spring Boot as backend and Javascript with React and Typescript as frontend. For the frontend I additionally used webpack as middleware and react-bootstrap for CSS-Styling.
-
-It is a simple taskmanager to add, show and delete tasks. When you add a new task, you can add it with a title and shown as "completed" or not "completed". The reason for the initial "completed" setting is, that a method to update a single task (setting it as "completed") is not implemented yet. I have tried but was facing a cross-origin error which I was not able to solve in a short period of time.
+For more info see README in main-folder
