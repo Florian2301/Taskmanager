@@ -36,13 +36,4 @@ public class TaskController {
         taskService.deleteTask(id);
         return "Task " + id + " deleted";
     }
-
-    // method to update the value of complete of a task
-    // backend is working fine, checked with Postman, frontend causes an error
-    @PatchMapping("/{id}")
-    public String updateTask(@PathVariable("id") int id)
-    {
-        taskService.updateTask(id);
-        return "Task " + id + " updated";
-    }
 }

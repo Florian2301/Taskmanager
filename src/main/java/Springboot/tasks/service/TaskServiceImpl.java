@@ -30,15 +30,4 @@ public class TaskServiceImpl implements TaskService {
     {
         taskRepository.delete(taskRepository.getReferenceById(id));
     }
-
-    // method to update the value of completed of a task
-    // backend is working fine, checked with Postman, frontend causes an error
-    @Override
-    public void updateTask(int id)
-    {
-            Task task = taskRepository.findById(id).get();
-            task.setCompleted(!task.isCompleted());
-            taskRepository.save(task);
-            System.out.println("update " + task);
-    }
 }

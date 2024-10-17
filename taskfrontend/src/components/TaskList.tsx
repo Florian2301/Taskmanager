@@ -13,16 +13,6 @@ function TaskList() {
       })
   }, [])
 
-  /*
-  
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    e.preventDefault()
-    fetch('http://localhost:8080/task/' + e, {
-      method: 'PATCH',
-    })
-      .then(() => console.log('task ' + e + ' sucessfully updated'))
-  }*/
-
   // method to delete a task
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
     fetch('http://localhost:8080/task/' + e, {
@@ -47,7 +37,6 @@ function TaskList() {
                 type={'checkbox'}
                 id={task.id}
                 checked={task.completed}
-                //onChange={handleChange} -> bugfix method to update value of complete
               />
               <Button
                 id={task.id}
