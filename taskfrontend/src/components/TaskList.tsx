@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 function TaskList() {
   const [tasks, setTasks] = useState([])
 
-  // React Hook for loading the data when app starts
   useEffect(() => {
     fetch('http://localhost:8080/task/getAll')
       .then((res) => res.json())
@@ -13,7 +12,6 @@ function TaskList() {
       })
   }, [])
 
-  // method to delete a task
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
     fetch('http://localhost:8080/task/' + e, {
       method: 'DELETE',
@@ -23,7 +21,6 @@ function TaskList() {
   return (
     <ListGroup>
       {tasks.map((task) =>
-        // if title is empty, task should not be displayed, bc there must have been an error while saving
         task.title ? (
           <ListGroup.Item key={task.id} style={{ textAlign: 'left' }}>
             <div>task: {task.id}</div>

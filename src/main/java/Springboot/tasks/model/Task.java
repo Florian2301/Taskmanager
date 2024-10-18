@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Task {
-    // model for tasks
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

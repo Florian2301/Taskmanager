@@ -3,15 +3,13 @@ import React, { useState } from 'react'
 
 const NewTask: React.FC = () => {
   const [title, setTitle] = useState('')
-  const [completed, setCompleted] = useState(false) // default value for completed is false
+  const [completed, setCompleted] = useState(false)
 
-  // method to add/save a new task
   const handleClick = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
 
     const task = { title, completed }
 
-    // validation for title, should not be null or empty
     if (title !== null && title !== '') {
       fetch('http://localhost:8080/task/add', {
         method: 'POST',
