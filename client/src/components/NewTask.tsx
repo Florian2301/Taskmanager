@@ -19,7 +19,7 @@ const NewTask: React.FC = () => {
     }
   }
 
-  function handleChange() {
+  const handleChange = (): void => {
     setCompleted(!completed)
   }
 
@@ -44,7 +44,7 @@ const NewTask: React.FC = () => {
           inline
           type={'checkbox'}
           defaultChecked={false}
-          onChange={handleChange}
+          onChange={() => handleChange()}
         />
         <Button variant='primary' type='submit'>
           Submit

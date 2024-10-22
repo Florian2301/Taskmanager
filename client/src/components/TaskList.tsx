@@ -1,7 +1,7 @@
 import { Button, Form, ListGroup } from 'react-bootstrap'
 import React, { useEffect, useState } from 'react'
 
-function TaskList() {
+const TaskList: React.FC = () => {
   const [tasks, setTasks] = useState([])
 
   useEffect(() => {
